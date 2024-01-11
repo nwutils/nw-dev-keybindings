@@ -5,21 +5,38 @@
  * @param {object} window  Browser window object
  */
 function nwDevKeyBindings (window) {
-  if (!window || !window.document) {
+  if (
+    !window ||
+    !window.document ||
+    !window.process
+   ) {
     return;
   }
 
   window.document.onkeydown = function (pressed) {
     var win;
-    if (
-      window &&
-      window.nw &&
-      window.nw.Window &&
-      window.nw.Window.get &&
-      window.process &&
+    var isSDK = (
       window.process.versions &&
       window.process.versions['nw-flavor'] &&
       window.process.versions['nw-flavor'] === 'sdk'
+    );
+    var isSuperOld = (
+      window.process['node-webkit'] &&
+      window.process['node-webkit'].startsWith &&
+      (
+        window.process.versions['node-webkit'].startsWith('0.10.') ||
+        window.process.versions['node-webkit'].startsWith('0.11.') ||
+        window.process.versions['node-webkit'].startsWith('0.12.')
+    );
+
+    if (
+      window.nw &&
+      window.nw.Window &&
+      window.nw.Window.get &&
+      (
+        isSDK ||
+        isSuperOld
+      )
     ) {
       win = window.nw.Window.get();
     } else {

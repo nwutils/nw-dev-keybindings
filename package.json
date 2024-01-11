@@ -1,0 +1,25 @@
+{
+  "name": "nw-dev-keybindings",
+  "version": "1.0.0",
+  "description": "Open dev tools and refresh keybindings for NW.js",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nwutils/nw-dev-keybindings.git"
+  },
+  "keywords": [
+    "NW.js",
+    "dev",
+    "tools",
+    "shortcuts",
+    "key",
+    "binding",
+    "tooling"
+  ],
+  "author": "The Jared Wilcurt",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nwutils/nw-dev-keybindings/issues"
+  },
+  "homepage": "https://github.com/nwutils/nw-dev-keybindings#readme"
+}
