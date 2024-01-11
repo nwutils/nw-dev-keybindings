@@ -1,6 +1,6 @@
 {
   "name": "nw-dev-keybindings",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Open dev tools and refresh keybindings for NW.js",
   "main": "index.js",
   "repository": {
