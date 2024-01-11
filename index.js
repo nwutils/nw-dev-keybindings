@@ -27,6 +27,7 @@ function nwDevKeyBindings (window) {
         window.process.versions['node-webkit'].startsWith('0.10.') ||
         window.process.versions['node-webkit'].startsWith('0.11.') ||
         window.process.versions['node-webkit'].startsWith('0.12.')
+      )
     );
 
     if (
